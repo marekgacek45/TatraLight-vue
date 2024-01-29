@@ -1,0 +1,113 @@
+<template>
+    <div>
+        <Head title="homePage"> </Head>
+        <meta name="description" content="lorem" />
+
+        <MainLayout>
+            <template #mainContent>
+                
+                    <div class="container-box">
+                        <div class="border-box text-box">
+                            <h3 class="heading">
+                                Kreujemy Niepowtarzalne Reklamy Świetlne
+                            </h3>
+                            <div class="text">
+                                <p>
+                                    Jesteśmy pasjonatami unikalnych rozwiązań w
+                                    dziedzinie reklamy świetlnej i
+                                    nietuzinkowych dekoracji.
+                                </p>
+                                <p>
+                                    Nasza oferta obejmuje nie tylko litery 3D,
+                                    kasetony, lightboxy i neony, ale także wiele
+                                    innych innowacyjnych pomysłów, które
+                                    sprawią, że Twoja przestrzeń stanie się
+                                    niezwykle wyjątkowa.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="border-box image-box"
+                        >
+                    <img src="/assets/images/big/tl-big_30.webp" alt="nasza realizacja w Fitness Factory" >
+                    
+                    </div>
+                    </div>
+
+                    <div class="container-box">
+                       
+                        <div
+                            class="border-box image-box order-1 md:order-none"
+                        >
+                    <img src="/assets/images/big/tl-big_18.webp" alt="nasze realizacja weselna" class="">
+                    
+                    </div>
+
+                        <div class="border-box text-box">
+                            <h3 class="heading">
+                                Nasze Dekoracje Przyciągają Uwagę
+                            </h3>
+                            <div class="text ">
+                                <p>
+                                    Dla nas każdy projekt to sztuka, dlatego
+                                    tworzymy niepowtarzalne oznaczenia i
+                                    dekoracje, dopasowane do indywidualnych
+                                    potrzeb klientów. Nasze rozwiązania nie
+                                    tylko przyciągają uwagę, ale również
+                                    zachwycają jakością wykonania i
+                                    pomysłowością.
+                                </p>
+                                <p>
+                                    Z nami Twoja przestrzeń nabierze nowego
+                                    blasku, a Twoja marka zyska niezapomniany
+                                    charakter. i do tej czesci potrzebuje krotki
+                                    naglowek
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    
+             
+
+                    <Footer></Footer>
+                
+            </template>
+        </MainLayout>
+    </div>
+</template>
+
+<script setup>
+import MainLayout from "@/Layouts/MainLayout.vue";
+import HomeCard from "@/Components/HomeCard.vue";
+import Footer from "./Shared/Footer.vue";
+</script>
+
+<style scoped>
+
+.container-box{
+    @apply flex flex-col md:flex-row gap-4 h-full
+}
+
+.text-box {
+    @apply md:w-7/12 py-12 md:py-0 px-8 md:px-4 2xl:px-12 flex flex-col justify-center gap-6;
+}
+
+.heading {
+    @apply text-3xl uppercase mb-6 sm:mb-0 text-fontHeading;
+}
+
+.text {
+    @apply space-y-4;
+}
+
+.image-box{
+    @apply  md:w-5/12 max-h-[400px]
+}
+
+.image-box img{
+    @apply  h-full w-full object-cover object-center hover:scale-110 duration-300
+}
+
+</style>
