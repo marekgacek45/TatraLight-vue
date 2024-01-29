@@ -1,12 +1,12 @@
 <template>
-    <div
+    <button type="button"
         class="hamburger group"
         @click="toggle" style="z-index: 1000000000000000"
     >
         <div class="bar1 group-hover:translate-y-1"></div>
         <div class="bar2"></div>
         <div class="bar3 group-hover:-translate-y-1"></div>
-    </div>
+    </button>
 </template>
 
 <script>

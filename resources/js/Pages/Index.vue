@@ -1,9 +1,18 @@
 <template>
     <div>
-        <Head title="homePage"> </Head>
-        <meta name="description" content="lorem" />
+        <!--HEAD-->
+        <Head title="Rozświetlamy Wyobraźnię, Tworzymy Niepowtarzalne Projekty Świetlne">
 
+            <meta name="description" content="TataLight - Tworzymy niepowtarzalne reklamy świetlne i dekoracje, dostosowane do Twoich potrzeb. Odkryj unikalne projekty, które przyciągają uwagę i dodają blasku przestrzeni." />
+        </Head>
+<!--LAYOUT-->
         <MainLayout>
+<!--HEADER-->
+<template #headerContent>
+<VideoBackground/>
+<HeadingBox heading="TatraLight">Pozwól nam wnieść światło do Twojego biznesu i przekształcić przestrzeń w coś wyjątkowego!</HeadingBox>
+</template>
+<!--MAIN-->
             <template #mainContent>
                 
                     <div class="container-box">
@@ -11,6 +20,10 @@
                             <h3 class="heading">
                                 Kreujemy Niepowtarzalne Reklamy Świetlne
                             </h3>
+                            <div class="flex justify-center">
+
+                                <img src="/assets/logo/logo--sign-dark.png" alt="" class="w-5 opacity-30">
+                            </div>
                             <div class="text">
                                 <p>
                                     Jesteśmy pasjonatami unikalnych rozwiązań w
@@ -47,6 +60,10 @@
                             <h3 class="heading">
                                 Nasze Dekoracje Przyciągają Uwagę
                             </h3>
+                            <div class="flex justify-center">
+
+<img src="/assets/logo/logo--sign-dark.png" alt="" class="w-5 opacity-30">
+</div>
                             <div class="text ">
                                 <p>
                                     Dla nas każdy projekt to sztuka, dlatego
@@ -80,8 +97,11 @@
 
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
-import HomeCard from "@/Components/HomeCard.vue";
+import VideoBackground from './Shared/Header/VideoBackgorund.vue'
 import Footer from "./Shared/Footer.vue";
+
+import HeadingBox from "@/Components/HeadingBox.vue"; 
+
 </script>
 
 <style scoped>
@@ -99,7 +119,7 @@ import Footer from "./Shared/Footer.vue";
 }
 
 .text {
-    @apply space-y-4;
+    @apply space-y-4 ;
 }
 
 .image-box{

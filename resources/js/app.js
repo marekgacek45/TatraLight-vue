@@ -5,10 +5,10 @@ import { createApp, h } from 'vue';
 import { createInertiaApp,Link,Head } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
-import Header from "./Pages/Shared/Header.vue"
+
 import NavBar from "./Pages/Shared/Navigation/NavBar.vue"
 import Footer from "./Pages/Shared/Footer.vue"
-
+import HeadingBox from './Components/HeadingBox.vue'
 
 const appName = import.meta.env.VITE_APP_NAME || 'TatraLight';
 
@@ -21,9 +21,10 @@ createInertiaApp({
             .use(ZiggyVue)
             .component('Link',Link)
             .component('Head',Head)
-            .component("Header",Header)
+            
             .component('NavBar',NavBar)
             .component('Footer',Footer)
+            .component('HeadingBox',HeadingBox)
             .mount(el);
     },
     progress: {

@@ -21,16 +21,14 @@ export default {
             colors: {
                 primaryColor: "#16514f",
                 secondaryColor: "#efe5d9",
-                overlayColor: "#185c5a",
-                antracit: "#383e42",
-                beige: "#efe5d9",
+               
 
 
                 bgLight:"#efe5d9",
                 bgDark:"#16514f",
 
                 fontLight:'#efe5d9',
-                fontDarK:'#000000',
+                fontDark:'#333333',
                 fontHeading:'#16514f',
             },
         },

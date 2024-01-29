@@ -4,15 +4,30 @@
             v-if="showModal"
             class="bg-bgLight fixed lg:absolute top-0 bottom-0 right-0 left-0 z-40 overflow-hidden"
         >
-            <div class="modal flex justify-center items-center flex-col gap-5">
-                <img src="/assets/logo/logo--sign.png" alt="logo firmy TatraLight" class="w-5 opacity-50">
-                <Link href="/menu" class="link" @click="addOverflow">O nas</Link>
+            <ul class="modal flex justify-center items-center flex-col gap-5">
+                <img src="/assets/logo/logo--sign.png" alt="logo firmy TatraLight" class="w-5 opacity-30">
                 
-                <Link href="/o-nas" class="link" @click="addOverflow">Realizacje</Link>
-                <Link href="/o-nas" class="link" @click="addOverflow">Dołącz do nas</Link>
-                <Link href="/kontakt" class="link" @click="addOverflow">Kontakt</Link>
-                <img src="/assets/logo/logo--sign.png" alt="logo firmy TatraLight" class="w-5 opacity-50">
-            </div>
+<li>
+
+    
+    
+    <Link href="/menu" class="link" @click="addOverflow">O nas</Link>
+</li>
+                    <li>
+
+                        <Link href="/o-nas" class="link" @click="addOverflow">Realizacje</Link>
+                    </li>
+                    <li>
+
+                        <Link href="/o-nas" class="link" @click="addOverflow">Dołącz do nas</Link>
+                    </li>
+                    <li>
+
+                        <Link href="/kontakt" class="link" @click="addOverflow">Kontakt</Link>
+                    </li>
+                
+                <img src="/assets/logo/logo--sign.png" alt="logo firmy TatraLight" class="w-5 opacity-30">
+            </ul>
         </div>
     </transition>
 </template>

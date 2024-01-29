@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="border-box flex justify-center items-center py-2 px-2 sm:px-4 space-x-5 bg-bgDark text-fontLight text-sm uppercase absolute top-10 left-10"
+        class="border-box absolute top-10 left-10 flex justify-center items-center py-2 px-2 sm:px-4 space-x-5 bg-bgDark text-fontLight text-sm uppercase  " 
     >
         <Hamburger @click="showModal = !showModal" />
 
