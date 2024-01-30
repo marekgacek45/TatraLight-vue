@@ -23,7 +23,7 @@ class MainController extends Controller
                 'extension' => $image->getExtension(),
                 // inne potrzebne informacje
             ];
-        })->toArray();
+        })->shuffle()->toArray();
 
 
         // dd($formattedImages);

@@ -14,17 +14,15 @@
 </template>
 <!--MAIN-->
             <template #mainContent>
+
+                <div class="grid-wrapper px-2">
               
-                   <div class="border-box overflow-y-scroll">
-
-
-                    <div v-for="(image, index) in images" :key="index">
-      <img :src="image.path" :alt="image.filename"></div>
-
-                       <Footer customClass="py-3"></Footer>
-                   </div>
+                <a v-for="(image, index) in images" :key="index" :class="getRandomClass()">
+      <img :src="image.path" :alt="image.filename">
+      <!-- inne elementy UI lub informacje o obrazie -->
+                </a>
                     
-             
+            </div>
 
                 
             </template>
@@ -39,9 +37,14 @@ import Footer from "./Shared/Footer.vue";
 
 import HeadingBox from "@/Components/HeadingBox.vue"; 
 
-defineProps({
-    images:Array
-})
+import { ref } from 'vue';
+
+const props = defineProps(['images']);
+
+const getRandomClass = () => {
+  const classes = ['tall', 'wide', 'big'];
+  return classes[Math.floor(Math.random() * classes.length)];
+};
 
 </script>
 
@@ -70,5 +73,48 @@ defineProps({
 .image-box img{
     @apply  h-full w-full object-cover object-center hover:scale-110 duration-300
 }
+
+.grid-wrapper > a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-wrapper > a> img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform .6s;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit,  1fr);
+	grid-auto-rows: 100px;
+	grid-auto-flow: dense;
+}
+
+.grid-wrapper .wide {
+	grid-column: span 1;
+}
+.grid-wrapper .tall {
+	grid-row: span 2;
+}
+.grid-wrapper .big {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+@media (min-width: 450px) { 
+	.grid-wrapper {
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-auto-rows: 200px;
+		grid-auto-flow: dense;
+	}
+}
+
+
 
 </style>
