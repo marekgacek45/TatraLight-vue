@@ -3,19 +3,26 @@
         <!--WRAPPER/CONTAINER-->
         <div class="flex flex-col xl:flex-row gap-4">
             <!--HEADER-->
-            <header class="border-box xl:w-6/12 h-[96vh] relative ">
+            <header class="border-box xl:w-6/12 h-[96vh] relative " :class="bgImage">
                 <NavBar />
                 <slot name="headerContent"></slot>
             </header>
             <!--MAIN-->
-            <main class="relative flex flex-col gap-4 xl:w-6/12 2xl:h-[96vh] ">
+            <main class="relative flex flex-col gap-4 xl:w-6/12 2xl:h-[96vh] overflow-y-auto">
                 <slot name="mainContent"> </slot>
             </main>
         </div>
     </transition>
 </template>
 
-<script setup></script>
+<script setup>
+
+defineProps({
+    bgImage:String
+})
+
+
+</script>
 
 <style>
 html{

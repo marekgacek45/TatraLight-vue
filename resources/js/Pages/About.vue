@@ -9,8 +9,8 @@
         <MainLayout>
 <!--HEADER-->
 <template #headerContent>
-<VideoBackground/>
-<HeadingBox heading="TatraLight">Pozwól nam wnieść światło do Twojego biznesu i przekształcić przestrzeń w coś wyjątkowego!</HeadingBox>
+<!-- <VideoBackground/> -->
+<HeadingBox heading="O nas">Pozwól nam wnieść światło do Twojego biznesu i przekształcić przestrzeń w coś wyjątkowego!</HeadingBox>
 </template>
 <!--MAIN-->
             <template #mainContent>
@@ -88,7 +88,7 @@
                     
              
 
-                    <Footer customClass="py-3"></Footer>
+                    <Footer></Footer>
                 
             </template>
         </MainLayout>

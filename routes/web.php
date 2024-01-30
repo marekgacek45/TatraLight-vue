@@ -40,3 +40,5 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/',[MainController::class,'index']);
+Route::get('/o_nas',[MainController::class,'About']);
+Route::get('/kontakt',[MainController::class,'Contact']);
