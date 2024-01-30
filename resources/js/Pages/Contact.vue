@@ -34,7 +34,9 @@
                                 alt=""
                                 class="w-3 opacity-50"
                             />
-                            <h3 class="text-2xl uppercase text-fontHeading">kontakt</h3>
+                                <h3 class="text-2xl uppercase text-fontHeading ">kontakt</h3>
+
+                            
                             <img
                                 src="/assets/logo/logo--sign-dark.png"
                                 alt=""
@@ -188,7 +190,7 @@
                                 alt=""
                                 class="w-3 opacity-50"
                             />
-                            <h3 class="text-2xl uppercase text-fontHeading">napisz do nas</h3>
+                            <h3 class="text-2xl uppercase text-fontHeading text-center">napisz do nas</h3>
                             <img
                                 src="/assets/logo/logo--sign-dark.png"
                                 alt=""
@@ -215,7 +217,6 @@
 
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
-import VideoBackground from "./Shared/Header/VideoBackgorund.vue";
 import Footer from "./Shared/Footer.vue";
 import SocialIcon from "@/Components/SocialIcon.vue";
 
@@ -227,31 +228,5 @@ import ReservationForm from '@/Components/Form/ReservationForm.vue'
 </script>
 
 <style scoped>
-.container-box {
-    @apply flex flex-col md:flex-row gap-4 ;
-}
 
-.box {
-    @apply md:w-6/12;
-}
-
-.text-box {
-    @apply md:w-6/12 py-12 md:py-0 px-8 md:px-4 2xl:px-12 flex flex-col justify-center gap-5;
-}
-
-.heading {
-    @apply text-3xl uppercase mb-6 sm:mb-0 text-fontHeading;
-}
-
-.text {
-    @apply space-y-4;
-}
-
-.image-box {
-    @apply md:w-5/12 max-h-[400px];
-}
-
-.image-box img {
-    @apply h-full w-full object-cover object-center hover:scale-110 duration-300;
-}
 </style>

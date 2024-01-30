@@ -1,13 +1,13 @@
 <template>
    <div class="flex flex-col justify-center items-center mt-6  gap-5">
-                            <div class=" px-12">
+                            <div class=" sm:px-12">
 
-                                <img src="/assets/images/contact-form.webp" alt="szczęsliwi goście naszej restauracji" class="rounded-2xl">
+                                <img src="/assets/logo/logo--green.png" alt="logo firmy TatraLight" class="rounded-2xl w-56 xl:w-72">
                             </div>
                             <svg
-                                fill="#efe7d2"
-                                width="52"
-                                height="52"
+                                fill="#16514f"
+                                width="32"
+                                height="32"
                                 version="1.1"
                                 id="lni_lni-checkmark-circle"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
                                     />
                                 </g>
                             </svg>
-                            <span class="px-8 text-base font-thin">Skontaktujemy się z Tobą w celu potwierdzenia rezerwacji</span>
-                            <span class="text-2xl font-heading">DZIĘKUJEMY</span>
+                            <span class="px-8 text-base font-thin">Skontaktujemy się z Tobą w ciągu 24 godzin</span>
+                            <span class="text-2xl font-heading text-fontHeading">DZIĘKUJEMY</span>
                         </div>
 </template>

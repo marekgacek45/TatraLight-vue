@@ -3,7 +3,7 @@
         v-if="!sendForm"
         @submit.prevent="submitForm"
         method="post"
-        class="mt-12"
+        class="mt-6"
     >
     <div class="flex gap-6">
         <div class="w-1/2">
@@ -28,7 +28,7 @@
                 type="tel"
                 placeholder="Telefon"
                 v-model="form.phone"
-                required
+                
             />
             <Error v-if="form.errors.phone">{{ form.errors.phone}}</Error>
         </Field>
@@ -95,7 +95,7 @@ defineProps({ errors: Object })
 const sendForm = ref(false);
 
 const submitForm = () => {
-    form.post("/rezerwacja", {
+    form.post("/kontakt", {
         preserveScroll: true,
         onSuccess: () => {
             sendForm.value = !sendForm.value;
