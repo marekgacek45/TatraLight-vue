@@ -10,7 +10,7 @@
             />
         </Head>
         <!--LAYOUT-->
-        <MainLayout bgImage="bg-[url('/assets/images/poster-small.webp')] md:bg-[url('/assets/images/poster-big.webp')] bg-cover bg-center">
+        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_16.webp')] md:bg-[url('/assets/images/big/tl-big_16.webp')] bg-cover bg-center">
             <!--HEADER-->
             <template #headerContent >
                 <!-- <VideoBackground/> -->
@@ -183,6 +183,7 @@
     </div>
     <div class="w-full h-4/6 flex gap-4">
         
+
         <div class="w-full h-full border-box py-6 px-6 sm:px-12 lg:px-36 xl:px-6 2xl:px-36">
             <div class="flex justify-center items-center gap-2">
                             <img
@@ -217,7 +218,6 @@
 
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
-import Footer from "./Shared/Footer.vue";
 import SocialIcon from "@/Components/SocialIcon.vue";
 
 import HeadingBox from "@/Components/HeadingBox.vue";

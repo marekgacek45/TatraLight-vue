@@ -8,7 +8,7 @@
                 <slot name="headerContent"></slot>
             </header>
             <!--MAIN-->
-            <main class="relative flex flex-col gap-4 xl:w-6/12 2xl:h-[96vh] overflow-y-auto">
+            <main class="relative flex flex-col gap-4 xl:w-6/12 2xl:max-h-[96vh] ">
                 <slot name="mainContent"> </slot>
             </main>
         </div>

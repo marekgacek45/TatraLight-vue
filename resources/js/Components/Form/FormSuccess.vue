@@ -1,8 +1,8 @@
 <template>
-   <div class="flex flex-col justify-center items-center mt-6  gap-5">
+   <div class="flex flex-col justify-center items-center mt-6 2xl:mt-12  gap-5">
                             <div class=" sm:px-12">
 
-                                <img src="/assets/logo/logo--green.png" alt="logo firmy TatraLight" class="rounded-2xl w-56 xl:w-72">
+                                <img src="/assets/logo/logo--green.png" alt="logo firmy TatraLight" class="rounded-2xl w-56 ">
                             </div>
                             <svg
                                 fill="#16514f"
