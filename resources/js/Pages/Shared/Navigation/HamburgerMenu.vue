@@ -11,15 +11,15 @@
 
     
     
-    <Link href="/menu" class="link" @click="addOverflow">O nas</Link>
+    <Link href="/o_nas" class="link" @click="addOverflow">O nas</Link>
 </li>
                     <li>
 
-                        <Link href="/o-nas" class="link" @click="addOverflow">Realizacje</Link>
+                        <Link href="/realizacje" class="link" @click="addOverflow">Realizacje</Link>
                     </li>
                     <li>
 
-                        <Link href="/o-nas" class="link" @click="addOverflow">Dołącz do nas</Link>
+                        <Link href="/dolacz_do_nas" class="link" @click="addOverflow">Dołącz do nas</Link>
                     </li>
                     <li>
 

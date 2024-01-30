@@ -30,7 +30,8 @@
                         <div
                             class="border-box image-box"
                         >
-                    <img src="/assets/images/big/tl-big_30.webp" alt="nasza realizacja w Fitness Factory" >
+                        <img src="/assets/images/big/tl-small_28.webp" alt="nasza realizacja" class=" sm:hidden">
+                    <img src="/assets/images/big/tl-big_28.webp" alt="nasza realizacja" class="hidden sm:inline-block">
                     
                     </div>
                     </div>
@@ -61,7 +62,8 @@
                         <div
                             class="border-box image-box order-1 md:order-none"
                         >
-                    <img src="/assets/images/big/tl-big_18.webp" alt="nasze realizacja weselna" class="">
+                        <img src="/assets/images/big/tl-small_15.webp" alt="nasza realizacja w Fitness Factory" class=" sm:hidden">
+                    <img src="/assets/images/big/tl-big_15.webp" alt="nasza realizacja w Fitness Factory" class="hidden sm:inline-block">
                     
                     </div>
 
