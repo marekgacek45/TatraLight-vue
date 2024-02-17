@@ -1,114 +1,96 @@
 <template>
     <div>
         <!--HEAD-->
-        <Head title="Rozświetlamy Wyobraźnię, Tworzymy Niepowtarzalne Projekty Świetlne">
-
-            <meta name="description" content="TataLight - Tworzymy niepowtarzalne reklamy świetlne i dekoracje, dostosowane do Twoich potrzeb. Odkryj unikalne projekty, które przyciągają uwagę i dodają blasku przestrzeni." />
+        <Head
+            title="Rozświetlamy Wyobraźnię, Tworzymy Niepowtarzalne Projekty Świetlne"
+        >
+            <meta
+                name="description"
+                content="TataLight - Tworzymy niepowtarzalne reklamy świetlne i dekoracje, dostosowane do Twoich potrzeb. Odkryj unikalne projekty, które przyciągają uwagę i dodają blasku przestrzeni."
+            />
         </Head>
-<!--LAYOUT-->
-        <MainLayout>
-<!--HEADER-->
-<template #headerContent>
-<VideoBackground/>
-<HeadingBox heading="TatraLight">Pozwól nam wnieść światło do Twojego biznesu i przekształcić przestrzeń w coś wyjątkowego!</HeadingBox>
-</template>
-<!--MAIN-->
-            <template #mainContent>
-               
-                <div class="grid-wrapper px-2">
-              
-                <a v-for="(image, index) in images" :key="index" :href="image.path" :class="getRandomClass()">
-      <img :src="image.path" :alt="image.filename">
-     
-                </a>
-                    
-            </div>
-
+        <!--LAYOUT-->
+        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_5.webp')] md:bg-[url('/assets/images/big/tl-big_5.webp')] bg-cover bg-center bg-gray-300 bg-blend-multiply">
+            <!--HEADER-->
+            <template #headerContent>
                 
+                <HeadingBox heading="Realizacje"
+                    >Inspiruj się naszymi projektami i zobacz, jak możemy wnieść światło i magię do Twojego biznesu!</HeadingBox
+                >
             </template>
+            <!--MAIN-->
+            <template #mainContent>
+             
+             <div class="overflow-x-auto " style="z-index: 10000000000;">
+             
+                 <silent-box class="silentbox group" :gallery="gallery" ></silent-box>
+             </div>
+             <Footer customClass="py-4"></Footer>
+             
+                          
+                         </template>
         </MainLayout>
     </div>
 </template>
 
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
-import VideoBackground from './Shared/Header/VideoBackgorund.vue'
+import VideoBackground from "./Shared/Header/VideoBackgorund.vue";
+
+import HeadingBox from "@/Components/HeadingBox.vue";
 
 
-import HeadingBox from "@/Components/HeadingBox.vue"; 
+import { ref } from 'vue'
+
+const props = defineProps({
+  images: Array
+})
+
+const gallery = ref(props.images)
 
 
 
 
 
-const props = defineProps(['images']);
 
-const getRandomClass = () => {
-  const classes = ['tall', 'wide', 'big'];
-  return classes[Math.floor(Math.random() * classes.length)];
-};
 
 </script>
 
-<style scoped>
+<style >
 
-.container-box{
-    @apply flex flex-col md:flex-row gap-4 h-full
-}
 
-.text-box {
-    @apply md:w-7/12 py-12 md:py-0 px-8 md:px-4 2xl:px-12 flex flex-col justify-center gap-6;
-}
-
-.heading {
-    @apply text-3xl uppercase mb-6 sm:mb-0 text-fontHeading;
-}
-
-.text {
-    @apply space-y-4 ;
-}
-
-.image-box{
-    @apply  md:w-5/12 max-h-[400px]
-}
-
-.image-box img{
-    @apply  h-full w-full object-cover object-center hover:scale-110 duration-300
-}
-
-.grid-wrapper > a {
+  
+ .silentbox > a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    overflow: hidden;
+    
+    
 }
-.grid-wrapper > a> img {
+.silentbox > a> img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	transition: transform .6s;
+    @apply rounded-xl hover:scale-110
 }
 
-.grid-wrapper {
+
+
+.silentbox {
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: repeat(auto-fit,  1fr);
 	grid-auto-rows: 100px;
 	grid-auto-flow: dense;
+    
 }
 
-.grid-wrapper .wide {
-	grid-column: span 1;
-}
-.grid-wrapper .tall {
-	grid-row: span 2;
-}
-.grid-wrapper .big {
-	grid-column: span 2;
-	grid-row: span 2;
-}
+
 
 @media (min-width: 450px) { 
-	.grid-wrapper {
+	.silentbox {
 		display: grid;
 		grid-gap: 10px;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -117,6 +99,13 @@ const getRandomClass = () => {
 	}
 }
 
+#silentbox-overlay__arrow-buttons .arrow:hover, #silentbox-overlay__arrow-buttons .arrow:focus{
+    @apply border-l-2 border-t-2 border-primaryColor
+}
+
+#silentbox-overlay__close-button .icon:before:hover, #silentbox-overlay__close-button .icon:after:hover{
+    @apply bg-white;
+}
 
 
 </style>

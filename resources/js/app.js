@@ -5,6 +5,8 @@ import { createApp, h } from 'vue';
 import { createInertiaApp,Link,Head } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
+import VueSilentbox from 'vue-silentbox'
+import 'vue-silentbox/dist/style.css'
 
 
 
@@ -21,6 +23,7 @@ createInertiaApp({
         return createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(VueSilentbox)
             .component('Link',Link)
             
             .component('Head',Head)

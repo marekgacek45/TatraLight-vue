@@ -14,23 +14,24 @@ class MainController extends Controller
         return inertia('About');
     }
     public function realisations(){
-
-        $images = File::files(public_path('/assets/images/small/'));
-        $formattedImages = collect($images)->map(function ($image) {
+        $bigImages = File::files(public_path('/assets/images/big/'));
+        $smallImages = File::files(public_path('/assets/images/small/'));
+    
+        $formattedImages = collect($bigImages)->map(function ($bigImage) use ($smallImages) {
+            $filename = $bigImage->getFilename();
+            $smallImage = collect($smallImages)->first(function ($smallImage) use ($filename) {
+                return $smallImage->getFilename() === $filename;
+            });
+    
             return [
-                'path' => asset(str_replace(public_path(), '', $image->getPathname())),
-                'filename' => $image->getFilename(),
-                'extension' => $image->getExtension(),
-                
+                'src' => asset(str_replace(public_path(), '', $bigImage->getPathname())),
+                'thumbnail' => $smallImage ? asset(str_replace(public_path(), '', $smallImage->getPathname())) : null,
             ];
         })->shuffle()->toArray();
-
-
-        
-        
-
+    
         return inertia('Realisations',['images'=>$formattedImages]);
     }
+    
     public function contact(){
         return inertia('Contact');
     }
