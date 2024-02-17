@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="border-box lg:mb-4 xl:mb-0 px-16 2xl:px-36 flex flex-col gap-2 sm:gap-0 sm:flex-row justify-between items-center bg-bgDark text-fontLight"
+        class="border-box lg:mb-4 xl:mb-0  flex flex-col gap-2 sm:gap-0 sm:flex-row justify-evenly items-center bg-bgDark text-fontLight"
         :class="customClass"
     >
         <Link href="polityka_prywatnosci" class="link"

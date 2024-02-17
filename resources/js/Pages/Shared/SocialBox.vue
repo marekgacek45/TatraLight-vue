@@ -63,3 +63,4 @@
 
 <script setup>
 import SocialIcon from '@/Components/SocialIcon.vue';
+</script>

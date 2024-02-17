@@ -2,11 +2,11 @@
     
     <div class="absolute inset-0 w-full h-full bg-black opacity-30 -z-10"></div>
 
-        <video autoplay loop muted poster="/assets/images/poster-small.webp" class="video md:hidden ">
+        <video autoplay loop muted poster="/assets/images/poster-small.webp" class="video sm:hidden ">
             <source src="/assets/videos/home-small.mp4" type="video/mp4">
             Twoja przeglądarka nie obsługuje odtwarzacza wideo.
         </video>
-        <video autoplay loop muted poster="/assets/images/poster-big.webp" class="video hidden md:block">
+        <video autoplay loop muted poster="/assets/images/poster-big.webp" class="video hidden sm:block">
             <source src="/assets/videos/home-big.mp4" type="video/mp4">
             Twoja przeglądarka nie obsługuje odtwarzacza wideo.
         </video>

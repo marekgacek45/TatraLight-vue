@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div
-                            class="border-box image-box"
+                            class="border-box image-box "
                         >
                     <img src="/assets/images/big/tl-big_30.webp" alt="nasza realizacja w Fitness Factory" >
                     
@@ -111,19 +111,19 @@ import HeadingBox from "@/Components/HeadingBox.vue";
 }
 
 .text-box {
-    @apply md:w-7/12 py-12 md:py-0 px-8 md:px-4 2xl:px-12 flex flex-col justify-center gap-6;
+    @apply md:w-7/12 py-8 md:py-0 px-8 md:px-4 lg:px-16 xl:px-4 2xl:px-8 flex flex-col justify-center gap-6 ;
 }
 
 .heading {
-    @apply text-3xl uppercase mb-6 sm:mb-0 text-fontHeading;
+    @apply text-3xl xl:text-2xl 2xl:text-3xl text-center uppercase md:mb-6 sm:mb-0 text-fontHeading ;
 }
 
 .text {
-    @apply space-y-4 ;
+    @apply space-y-4 font-medium text-base xl:text-sm 2xl:text-base;
 }
 
 .image-box{
-    @apply  md:w-5/12 max-h-[400px]
+    @apply  md:w-5/12 max-h-[412px]
 }
 
 .image-box img{

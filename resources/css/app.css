@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@font-face {
+    font-family: 'LEMONMILK';
+    src: url('../../public/assets/fonts/LEMONMILK/LEMONMILK-Light.otf') format('opentype');
+    font-weight: 300
+  }
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+    @apply font-text
+}
+
+h1,h2,h3,h4,h5,h6{
+    @apply font-heading
+}
 

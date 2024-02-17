@@ -21,12 +21,12 @@ class MainController extends Controller
                 'path' => asset(str_replace(public_path(), '', $image->getPathname())),
                 'filename' => $image->getFilename(),
                 'extension' => $image->getExtension(),
-                // inne potrzebne informacje
+                
             ];
         })->shuffle()->toArray();
 
 
-        // dd($formattedImages);
+        
         
 
         return inertia('Realisations',['images'=>$formattedImages]);

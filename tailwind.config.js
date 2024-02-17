@@ -13,10 +13,12 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                
+                heading: ["LEMONMILK", "sans-serif"],
+                text: ["Open Sans", "sans-serif"],
             },
             screens: {
-                xs: "450px",
+                xs: "390px",
             },
             colors: {
                 primaryColor: "#16514f",

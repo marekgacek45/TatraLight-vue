@@ -14,12 +14,12 @@
 </template>
 <!--MAIN-->
             <template #mainContent>
-
+               
                 <div class="grid-wrapper px-2">
               
-                <a v-for="(image, index) in images" :key="index" :class="getRandomClass()">
+                <a v-for="(image, index) in images" :key="index" :href="image.path" :class="getRandomClass()">
       <img :src="image.path" :alt="image.filename">
-      <!-- inne elementy UI lub informacje o obrazie -->
+     
                 </a>
                     
             </div>
@@ -33,11 +33,13 @@
 <script setup>
 import MainLayout from "@/Layouts/MainLayout.vue";
 import VideoBackground from './Shared/Header/VideoBackgorund.vue'
-import Footer from "./Shared/Footer.vue";
+
 
 import HeadingBox from "@/Components/HeadingBox.vue"; 
 
-import { ref } from 'vue';
+
+
+
 
 const props = defineProps(['images']);
 

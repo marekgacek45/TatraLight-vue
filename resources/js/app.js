@@ -6,6 +6,8 @@ import { createInertiaApp,Link,Head } from '@inertiajs/vue3';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 
+
+
 import NavBar from "./Pages/Shared/Navigation/NavBar.vue"
 import Footer from "./Pages/Shared/Footer.vue"
 import HeadingBox from './Components/HeadingBox.vue'
@@ -20,6 +22,7 @@ createInertiaApp({
             .use(plugin)
             .use(ZiggyVue)
             .component('Link',Link)
+            
             .component('Head',Head)
             
             .component('NavBar',NavBar)
