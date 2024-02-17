@@ -52,9 +52,17 @@
                 id="message"
                 placeholder="Wiadomość"
                 v-model="form.message"
+                required
             ></textarea>
             <Error v-if="form.errors.message">{{ form.errors.message }}</Error>
         </div>
+<div class="my-2">
+
+    <span class="text-xs">
+        Ta strona jest chroniona przez reCAPTCHA i obowiązuje ją
+        <a href="https://policies.google.com/privacy" target="_blank">Polityka Prywatności</a> and
+        <a href="https://policies.google.com/terms" target="_blank">Warunki Korzystania </a>z usługi Google.</span>
+    </div>
 
         <div class="mt-2">
             <PrimaryButton type="submit" :disabled="form.processing"
@@ -73,7 +81,6 @@ import PrimaryButton from "@/Components/Base/PrimaryButton.vue";
 import Field from "@/Components/Form/Field.vue";
 import Input from "@/Components/Form/Input.vue";
 import FormSuccess from "@/Components/Form/FormSuccess.vue";
-import TextArea from "@/Components/Form/TextArea.vue";
 import Error from "@/Components/Form/Error.vue";
 
 import { useForm } from "@inertiajs/vue3";
@@ -95,7 +102,7 @@ defineProps({
     recaptcha_site_key: String,
 });
 
-const sendForm = ref(true);
+const sendForm = ref(false);
 
 const recaptcha = async () => {
     // (optional) Wait until recaptcha has been loaded.

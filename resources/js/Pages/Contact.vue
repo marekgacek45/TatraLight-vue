@@ -197,7 +197,7 @@
                                 class="w-3 opacity-50"
                             />
                         </div>
-                        <p class="text-sm text-center mt-2 text"> Jesteśmy do Twojej dyspozycji! Jeśli masz pytania, chętnie na nie odpowiemy. Skorzystaj z formularza kontaktowego poniżej i daj nam znać, jak możemy Ci pomóc.</p>
+                        
 
 <ReservationForm></ReservationForm>
 

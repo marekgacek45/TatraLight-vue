@@ -158,7 +158,7 @@ import SectionHeadingVue from "@/Components/SectionHeading.vue";
 }
 
 .image-box {
-    @apply md:w-5/12 min-h-[412px] lg:min-h-0 max-h-[412px];
+    @apply md:w-5/12 min-h-[412px] lg:min-h-0 max-h-[408px];
 }
 
 .image-box img {

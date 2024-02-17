@@ -45,3 +45,4 @@ Route::get('/o_nas',[MainController::class,'About']);
 Route::get('/kontakt',[MainController::class,'Contact']);
 Route::post('/kontakt',[FormsController::class,'Contact']);
 Route::get('/realizacje',[MainController::class,'Realisations']);
+Route::get('/polityka_prywatnosci',[MainController::class,'PrivacyPolicy']);

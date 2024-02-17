@@ -3,7 +3,7 @@
         class="border-box lg:mb-4 xl:mb-0  flex flex-col gap-2 sm:gap-0 sm:flex-row justify-evenly items-center bg-bgDark text-fontLight"
         :class="customClass"
     >
-        <Link href="polityka_prywatnosci" class="link"
+        <Link href="/polityka_prywatnosci" class="link"
             >Polityka Prywatności</Link
         >
         <img src="/assets/logo/logo--sign.png" alt="" class="decoration" />
