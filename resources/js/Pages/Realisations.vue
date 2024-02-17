@@ -10,7 +10,7 @@
             />
         </Head>
         <!--LAYOUT-->
-        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_5.webp')] md:bg-[url('/assets/images/big/tl-big_5.webp')] bg-cover bg-center bg-gray-300 bg-blend-multiply">
+        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_5.webp')] sm:bg-[url('/assets/images/big/tl-big_5.webp')] bg-cover bg-center bg-gray-300 bg-blend-multiply">
             <!--HEADER-->
             <template #headerContent>
                 

@@ -10,13 +10,12 @@
             />
         </Head>
         <!--LAYOUT-->
-        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_16.webp')] md:bg-[url('/assets/images/big/tl-big_16.webp')] bg-cover bg-center">
+        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_16.webp')] sm:bg-[url('/assets/images/big/tl-big_16.webp')] bg-cover bg-center">
             <!--HEADER-->
             <template #headerContent >
                 <!-- <VideoBackground/> -->
                 <HeadingBox heading="Kontakt"
-                    >Pozwól nam wnieść światło do Twojego biznesu i
-                    przekształcić przestrzeń w coś wyjątkowego!</HeadingBox
+                    >Jesteśmy zawsze do Twojej dyspozycji! Wybierz sposób kontaktu, który Ci odpowiada!</HeadingBox
                 >
             </template>
             <!--MAIN-->
@@ -34,7 +33,7 @@
                                 alt=""
                                 class="w-3 opacity-50"
                             />
-                                <h3 class="text-2xl uppercase text-fontHeading ">kontakt</h3>
+                                <h3 class="text-2xl uppercase text-fontHeading heading">kontakt</h3>
 
                             
                             <img
@@ -46,16 +45,16 @@
 
 
 
-                        <div class="xs:px-16 sm:px-0 md:px-6 lg:px-16 xl:px-2 2xl:px-12">
+                        <div class="xs:px-16 sm:px-0 md:px-6 lg:px-16 xl:px-2 2xl:px-12 text">
                 <div class="flex justify-between items-center my-3">
                     <span class="text-lg font-medium">Adres</span
-                    ><span class="text-end font-extralight"
+                    ><span class="text-end "
                         >Ludźmierska 29<br />Nowy Targ</span
                     >
                 </div>
                 <div class="flex justify-between items-center my-3">
                     <span class="text-lg font-medium">Telefon</span
-                    ><a href="tel:+48537392878" class="font-extralight"
+                    ><a href="tel:+48537392878" 
                         >123 456 789</a
                     >
                 </div>
@@ -63,7 +62,7 @@
                     <span class="text-lg font-medium">Email</span
                     ><a
                         href="mailto:kontakt@marekgacek.pl"
-                        class="font-extralight"
+                        
                         >test@gmail.com</a
                     >
                 </div></div>
@@ -191,14 +190,14 @@
                                 alt=""
                                 class="w-3 opacity-50"
                             />
-                            <h3 class="text-2xl uppercase text-fontHeading text-center">napisz do nas</h3>
+                            <h3 class="text-2xl uppercase text-fontHeading text-center heading">napisz do nas</h3>
                             <img
                                 src="/assets/logo/logo--sign-dark.png"
                                 alt=""
                                 class="w-3 opacity-50"
                             />
                         </div>
-                        <p class="text-sm text-center mt-2"> Jesteśmy do Twojej dyspozycji! Jeśli masz pytania, chętnie na nie odpowiemy. Skorzystaj z formularza kontaktowego poniżej i daj nam znać, jak możemy Ci pomóc.</p>
+                        <p class="text-sm text-center mt-2 text"> Jesteśmy do Twojej dyspozycji! Jeśli masz pytania, chętnie na nie odpowiemy. Skorzystaj z formularza kontaktowego poniżej i daj nam znać, jak możemy Ci pomóc.</p>
 
 <ReservationForm></ReservationForm>
 
@@ -228,5 +227,27 @@ import ReservationForm from '@/Components/Form/ReservationForm.vue'
 </script>
 
 <style scoped>
+.container-box {
+    @apply flex flex-col md:flex-row gap-4 h-full;
+}
 
+.text-box {
+    @apply md:w-7/12 py-8 md:py-0 px-8 md:px-4 lg:px-16 xl:px-4 2xl:px-8 flex flex-col justify-center gap-6;
+}
+
+.heading {
+    @apply text-3xl xl:text-2xl 2xl:text-3xl text-center uppercase  text-fontHeading;
+}
+
+.text {
+    @apply space-y-4 font-medium text-base xl:text-sm 2xl:text-base;
+}
+
+.image-box {
+    @apply md:w-5/12 min-h-[412px] lg:min-h-0 max-h-[412px];
+}
+
+.image-box img {
+    @apply h-full w-full object-cover object-center hover:scale-110 duration-300;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-col justify-center items-center mt-6 2xl:mt-12  gap-5">
+   <div class="flex flex-col justify-center items-center mt-6 xl:mt-12  gap-5">
                             <div class=" sm:px-12">
 
                                 <img src="/assets/logo/logo--green.png" alt="logo firmy TatraLight" class="rounded-2xl w-56 ">
@@ -29,7 +29,7 @@
                                     />
                                 </g>
                             </svg>
-                            <span class="px-8 text-base font-thin">Skontaktujemy się z Tobą w ciągu 24 godzin</span>
+                            <span class="px-8 text-base font-thin text-center">Skontaktujemy się z Tobą najszybciej jak to możliwe</span>
                             <span class="text-2xl font-heading text-fontHeading">DZIĘKUJEMY</span>
                         </div>
 </template>

@@ -1,41 +1,40 @@
 <template>
     <form
         v-if="!sendForm"
-        @submit.prevent="submitForm"
+        @submit.prevent="recaptcha"
         method="post"
         class="mt-6"
     >
-    <div class="flex gap-6">
-        <div class="w-1/2">
-
-        
+        <div class="flex gap-6">
+            <div class="w-1/2">
+                <Field>
+                    <Input
+                        id="name"
+                        type="text"
+                        placeholder="Imię i Nazwisko"
+                        v-model="form.name"
+                        required
+                    />
+                    <Error v-if="form.errors.name">{{
+                        form.errors.name
+                    }}</Error>
+                </Field>
+            </div>
+            <div class="w-1/2">
+                <Field>
+                    <Input
+                        id="phone"
+                        type="tel"
+                        placeholder="Telefon"
+                        v-model="form.phone"
+                    />
+                    <Error v-if="form.errors.phone">{{
+                        form.errors.phone
+                    }}</Error>
+                </Field>
+            </div>
+        </div>
         <Field>
-            <Input
-                id="name"
-                type="text"
-                placeholder="Imię i Nazwisko"
-                v-model="form.name"
-                required
-                />
-                <Error v-if="form.errors.name">{{ form.errors.name}}</Error>
-        </Field>
-    </div>
-    <div class="w-1/2">
-
-   <Field>
-            <Input
-                id="phone"
-                type="tel"
-                placeholder="Telefon"
-                v-model="form.phone"
-                
-            />
-            <Error v-if="form.errors.phone">{{ form.errors.phone}}</Error>
-        </Field>
-       
-    </div>
-    </div>
-    <Field>
             <Input
                 id="email"
                 type="email"
@@ -43,9 +42,9 @@
                 v-model="form.email"
                 required
             />
-            <Error v-if="form.errors.email">{{ form.errors.email}}</Error>
+            <Error v-if="form.errors.email">{{ form.errors.email }}</Error>
         </Field>
-       
+
         <div>
             <textarea
                 rows="4"
@@ -54,14 +53,14 @@
                 placeholder="Wiadomość"
                 v-model="form.message"
             ></textarea>
-            <Error v-if="form.errors.message">{{ form.errors.message}}</Error>
+            <Error v-if="form.errors.message">{{ form.errors.message }}</Error>
         </div>
 
-       <div class="mt-2">
-           
-           <PrimaryButton type="submit" :disabled="form.processing">Wyślij</PrimaryButton>
+        <div class="mt-2">
+            <PrimaryButton type="submit" :disabled="form.processing"
+                >Wyślij</PrimaryButton
+            >
         </div>
-      
     </form>
 
     <div v-else>
@@ -75,26 +74,40 @@ import Field from "@/Components/Form/Field.vue";
 import Input from "@/Components/Form/Input.vue";
 import FormSuccess from "@/Components/Form/FormSuccess.vue";
 import TextArea from "@/Components/Form/TextArea.vue";
-import Error from "@/Components/Form/Error.vue"
+import Error from "@/Components/Form/Error.vue";
 
 import { useForm } from "@inertiajs/vue3";
 import { ref } from "vue";
+import { useReCaptcha } from "vue-recaptcha-v3";
 
-
+const { executeRecaptcha, recaptchaLoaded } = useReCaptcha();
 
 const form = useForm({
     name: "",
     email: "",
-    // phone: "",
-    // date: "",
     message: "",
+    captcha_token: null,
 });
 
-defineProps({ errors: Object })
+defineProps({
+    form: Object,
+    errors: Object,
+    recaptcha_site_key: String,
+});
 
-const sendForm = ref(false);
+const sendForm = ref(true);
 
-const submitForm = () => {
+const recaptcha = async () => {
+    // (optional) Wait until recaptcha has been loaded.
+    await recaptchaLoaded();
+
+    // Execute reCAPTCHA with action "login".
+    form.captcha_token = await executeRecaptcha("login");
+    submit();
+    // Do stuff with the received token.
+};
+
+const submit = () => {
     form.post("/kontakt", {
         preserveScroll: true,
         onSuccess: () => {
