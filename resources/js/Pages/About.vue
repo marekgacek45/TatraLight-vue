@@ -16,8 +16,8 @@
 </template>
 <!--MAIN-->
             <template #mainContent>
-                <div class="container-box">
-                        <div class="border-box text-box">
+                <div class="container-box ">
+                        <div class="border-box text-box ">
                             <SectionHeadingVue>Nasza misja</SectionHeadingVue>
 
     <div class="space-y-4 2xl:mt-6">
@@ -28,10 +28,10 @@
                             
                         </div>
                         <div
-                            class="border-box image-box"
+                            class="border-box image-box "
                         >
-                        <img src="/assets/images/big/tl-small_28.webp" alt="nasza realizacja" class=" sm:hidden">
-                    <img src="/assets/images/big/tl-big_28.webp" alt="nasza realizacja" class="hidden sm:inline-block">
+                        <img src="/assets/images/small/tl-small_20.webp" alt="nasza realizacja" class=" sm:hidden ">
+                    <img src="/assets/images/big/tl-big_20.webp" alt="nasza realizacja" class="hidden sm:inline-block">
                     
                     </div>
                     </div>
@@ -62,7 +62,7 @@
                         <div
                             class="border-box image-box order-1 md:order-none"
                         >
-                        <img src="/assets/images/big/tl-small_15.webp" alt="nasza realizacja w Fitness Factory" class=" sm:hidden">
+                        <img src="/assets/images/small/tl-small_15.webp" alt="nasza realizacja w Fitness Factory" class=" sm:hidden">
                     <img src="/assets/images/big/tl-big_15.webp" alt="nasza realizacja w Fitness Factory" class="hidden sm:inline-block">
                     
                     </div>
@@ -130,7 +130,7 @@ import SectionHeadingVue from "@/Components/SectionHeading.vue";
 }
 
 .image-box{
-    @apply  md:w-5/12 max-h-[400px]
+    @apply  md:w-5/12 max-h-[411px]
 }
 
 .image-box img{
@@ -139,5 +139,29 @@ import SectionHeadingVue from "@/Components/SectionHeading.vue";
 
 .social-box{
 @apply   mx-auto flex justify-center items-center  bg-bgDark  hover:bg-bgLight py-2 px-10
+}
+
+.container-box {
+    @apply flex flex-col md:flex-row gap-4 h-full;
+}
+
+.text-box {
+    @apply md:w-7/12 py-8 md:py-0 px-8 md:px-4 lg:px-16 xl:px-4 2xl:px-8 flex flex-col justify-center gap-6;
+}
+
+.heading {
+    @apply text-3xl xl:text-2xl 2xl:text-3xl text-center uppercase  text-fontHeading;
+}
+
+.text {
+    @apply space-y-4 font-medium text-base xl:text-sm 2xl:text-base;
+}
+
+.image-box {
+    @apply md:w-5/12 min-h-[412px] lg:min-h-0 max-h-[412px];
+}
+
+.image-box img {
+    @apply h-full w-full object-cover object-center hover:scale-110 duration-300;
 }
 </style>
