@@ -2,7 +2,7 @@
     <div>
         <!--HEAD-->
         <Head
-            title="Rozświetlamy Wyobraźnię, Tworzymy Niepowtarzalne Projekty Świetlne"
+            title="Realizajce | Coś więcej niż zwykła reklama"
         >
             <meta
                 name="description"
@@ -10,7 +10,7 @@
             />
         </Head>
         <!--LAYOUT-->
-        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_5.webp')] sm:bg-[url('/assets/images/big/tl-big_5.webp')] bg-cover bg-center bg-gray-300 bg-blend-multiply">
+        <MainLayout bgImage="bg-[url('/assets/images/small/tl-small_10.webp')] sm:bg-[url('/assets/images/big/tl-big_10.webp')] bg-cover bg-center bg-gray-300 bg-blend-multiply">
             <!--HEADER-->
             <template #headerContent>
                 
@@ -21,7 +21,7 @@
             <!--MAIN-->
             <template #mainContent>
              
-             <div class="overflow-x-auto " style="z-index: 10000000000;">
+             <div class="overflow-x-auto " >
              
                  <silent-box class="silentbox group" :gallery="gallery" ></silent-box>
              </div>
@@ -107,5 +107,7 @@ const gallery = ref(props.images)
     @apply bg-white;
 }
 
-
+#silentbox-overlay{
+    z-index: 1000000000000000000000000000;
+}
 </style>

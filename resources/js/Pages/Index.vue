@@ -24,7 +24,7 @@
                 <div class="container-box">
                     <div class="border-box text-box">
                         <h3 class="heading">
-                            Kreujemy Niepowtarzalne Reklamy Świetlne
+                           Od naklejki po Reklamy Świetlne
                         </h3>
                         <div class="flex justify-center">
                             <img

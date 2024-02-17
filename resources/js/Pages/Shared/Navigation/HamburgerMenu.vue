@@ -31,15 +31,33 @@
 
 <script setup>
 import { Link } from "@inertiajs/vue3";
+import { ref, onMounted, onUnmounted, watchEffect } from 'vue';
 
-defineProps({
+
+const props = defineProps({
     showModal: Boolean,
 });
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
-const addOverflow = () => {
-    body.classList.remove("overflow-y-hidden");
-};
+// const addOverflow = () => {
+//     body.classList.remove("overflow-y-hidden");
+// };
+let body;
+
+onMounted(() => {
+  body = document.querySelector('body');
+  watchEffect(() => {
+    if (props.showModal) {
+      body.classList.add('overflow-y-hidden');
+    } else {
+      body.classList.remove('overflow-y-hidden');
+    }
+  });
+});
+
+onUnmounted(() => {
+  body.classList.remove('overflow-y-hidden');
+});
 </script>
 
 <style lang="scss" scoped>

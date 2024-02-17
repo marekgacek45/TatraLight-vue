@@ -7,9 +7,10 @@
             >Polityka Prywatności</Link
         >
         <img src="/assets/logo/logo--sign.png" alt="" class="decoration" />
+        <Link href="/" class="link">
         <span
             ><span class="text-sm">©{{ year }}</span> Tatralight</span
-        >
+        ></Link>
         <img src="/assets/logo/logo--sign.png" alt="" class="decoration" />
         <a href="https://marekgacekdev.pl" target="_blank" class="link"
             >created by Marek Gacek</a
@@ -30,6 +31,6 @@ const year = today.getFullYear();
 }
 
 .decoration {
-    @apply w-3 opacity-30;
+    @apply w-4 opacity-50;
 }
 </style>
