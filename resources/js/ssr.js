@@ -11,9 +11,9 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import VueSilentbox from 'vue-silentbox'
 import 'vue-silentbox/dist/style.css'
 
-import NavBar from "./Pages/Shared/Navigation/NavBar.vue"
-import Footer from "./Pages/Shared/Footer.vue"
-import HeadingBox from './Components/HeadingBox.vue'
+import NavBar from "@/Pages/Shared/Navigation/NavBar.vue"
+import Footer from "@/Pages/Shared/Footer.vue"
+import HeadingBox from '@/Components/HeadingBox.vue'
 
 createServer(page =>
   createInertiaApp({
@@ -24,12 +24,13 @@ createServer(page =>
       return pages[`./Pages/${name}.vue`]
     },
     setup({ App, props, plugin }) {
+    
       return createSSRApp({
         render: () => h(App, props),
       }).use(plugin)
       .use(ZiggyVue)
       .use(VueSilentbox)
-      
+     
       .component('Link',Link)
       
       .component('Head',Head)

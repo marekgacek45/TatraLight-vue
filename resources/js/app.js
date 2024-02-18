@@ -12,9 +12,9 @@ import 'vue-silentbox/dist/style.css'
 
 
 
-import NavBar from "./Pages/Shared/Navigation/NavBar.vue"
-import Footer from "./Pages/Shared/Footer.vue"
-import HeadingBox from './Components/HeadingBox.vue'
+import NavBar from "@/Pages/Shared/Navigation/NavBar.vue"
+import Footer from "@/Pages/Shared/Footer.vue"
+import HeadingBox from '@/Components/HeadingBox.vue'
 
 const appName = import.meta.env.VITE_APP_NAME || 'TatraLight';
 

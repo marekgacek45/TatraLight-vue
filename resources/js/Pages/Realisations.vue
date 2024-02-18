@@ -65,6 +65,7 @@ const gallery = ref(props.images)
 	justify-content: center;
 	align-items: center;
     overflow: hidden;
+    @apply rounded-xl
     
     
 }
@@ -73,7 +74,7 @@ const gallery = ref(props.images)
 	height: 100%;
 	object-fit: cover;
 	transition: transform .6s;
-    @apply rounded-xl hover:scale-110
+    @apply rounded-xl hover:scale-110 
 }
 
 
