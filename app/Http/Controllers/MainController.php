@@ -38,14 +38,4 @@ class MainController extends Controller
     public function privacyPolicy(){
         return inertia('PrivacyPolicy');
     }
-
-    public function test(){
-        return inertia('Test');
-    }
-    public function testContact(){
-        
-    }
-
-
-  
 }

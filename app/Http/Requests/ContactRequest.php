@@ -20,24 +20,16 @@ class ContactRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
+   
     public function rules(): array
     {
         return [
-            'name' => 'required',
-
-
+            'name'=>'required|max:200',
+            'email'=>'required|email',
+            'phone'=>'max:20',
+            'message'=>'required',
+            // 'captcha_token'  => [new Recaptcha],
 
         ];
     }
-    // public function rules(): array
-    // {
-    //     return [
-    //         'name'=>'required|max:200',
-    //         'email'=>'required|email',
-    //         'phone'=>'max:20',
-    //         'message'=>'required',
-    //         // 'captcha_token'  => [new Recaptcha],
-
-    //     ];
-    // }
 }

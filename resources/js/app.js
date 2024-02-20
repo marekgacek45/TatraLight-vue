@@ -1,3 +1,4 @@
+
 import './bootstrap';
 import '../css/app.css';
 
@@ -12,7 +13,7 @@ import 'vue-silentbox/dist/style.css'
 
 
 
-import NavBar from "@/Pages/Shared/Navigation/NavBar.vue"
+import NavBar from "@/Pages/Shared/Navigation/Navbar.vue"
 import Footer from "@/Pages/Shared/Footer.vue"
 import HeadingBox from '@/Components/HeadingBox.vue'
 

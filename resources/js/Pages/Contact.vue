@@ -132,7 +132,7 @@
                             />
                         </div>
                         
-
+                     
 <ReservationForm></ReservationForm>
 
         </div>
@@ -156,6 +156,26 @@ import SocialIcon from "@/Components/SocialIcon.vue";
 import HeadingBox from "@/Components/HeadingBox.vue";
 
 import ReservationForm from '@/Components/Form/ReservationForm.vue'
+
+import { useForm } from '@inertiajs/vue3'
+import { ref } from 'vue';
+
+const form = useForm({
+  email: '',
+  message: '',
+})
+
+const sendForm = ref(false);
+
+const submit = () => {
+    form.post("/send-mail", {
+        preserveScroll: true,
+        onSuccess: () => {
+            sendForm.value = !sendForm.value;
+            console.log('udało się');
+        },
+    });
+};
 
 
 </script>

@@ -1,10 +1,9 @@
 <?php
 
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\FormsController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
 
@@ -19,14 +18,14 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-// Route::get('/', function () {
-//     return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
+Route::get('/', function () {
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -41,11 +40,16 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
+
+
+
+
 Route::get('/',[MainController::class,'index']);
 Route::get('/o_nas',[MainController::class,'About']);
 Route::get('/kontakt',[MainController::class,'Contact']);
-Route::post('/kontakt',[FormsController::class,'Contact'])->name('form');
 Route::get('/realizacje',[MainController::class,'Realisations']);
 Route::get('/polityka_prywatnosci',[MainController::class,'PrivacyPolicy']);
 
 
+
+Route::post('/send-mail', [MailController::class, 'sendEmail']);
